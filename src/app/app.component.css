@@ -1,0 +1,10 @@
+@import "node_modules/bootstrap/dist/css/bootstrap.css";
+
+.myOl{
+ list-style-type: none;
+  padding: 0;
+  align-content: end;
+}
+.myLi{
+  margin: 10px;
+}

@@ -1,0 +1,23 @@
+<div class="form-floating ">
+  <form (submit) = "onDetectLang()">
+    <label for="ta1">Enter a sentence for language detection:</label><br>
+    <textarea id="ta1" [(ngModel)] = "text" name="text" class="form-control"
+              style="border-color: lightgray; border-width: 5px;  margin-top: 50px"></textarea>
+    <br><br><br>
+    <button  mat-raised-button  class="submit" style="background: royalblue; margin-left: 20px">Detect Language</button>
+
+
+  </form>
+</div>
+<div *ngIf="response">
+  <h2>Detected Language: {{ detectedLang }}</h2>
+  <ul>
+    <li *ngFor="let detectedLanguage of detectedLangs">
+      Language: {{detectedLanguage.lang}}
+      MinConfidence: {{detectedLanguage.confidence}}
+    </li>
+  </ul>
+  <!--  <h2>Detected Language: {{ detectedLang }}</h2>-->
+
+  <!-- Dodajte prikaz ostalih rezultata ovde -->
+</div>

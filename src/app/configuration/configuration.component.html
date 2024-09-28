@@ -1,0 +1,17 @@
+<div class="maindiv" style="margin: 50px">
+  <h3>Configuration page</h3>
+  <br>
+  <div>
+    <form (submit)="onSubmit()" class="mb-5">
+      <div class="form-group mb-2">
+      <label for="token">Token  </label>
+      <input type="text" class="form-control" id="token" name="token"  [(ngModel)]="token">
+      </div>
+      <br><br>
+      <button mat-raised-button type="submit" class="btn btn-primary">Submit</button>
+      <br><br><br><br>
+
+    </form>
+  </div>
+
+</div>

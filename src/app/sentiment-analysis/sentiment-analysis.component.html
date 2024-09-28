@@ -1,0 +1,20 @@
+<div style="margin: 50px">
+  <h2 style="font-family: Roboto">Sentiment Analysis</h2>
+  <form (submit) = "onAnalyse()">
+    <textarea [(ngModel)] = "text" name="text"  rows="5" cols="70" ></textarea><br><br>
+    <label id="example-radio-group-label" style="font-family: 'Roboto';  font-style: oblique">Choose language:</label>
+    <mat-radio-group aria-labelledby="example-radio-group-label"
+                     name = "lang" class="example-radio-group" [(ngModel)]="lang">
+      <mat-radio-button class="example-radio-button" *ngFor="let l of langOptions" [value]="l">{{l}}</mat-radio-button>
+    </mat-radio-group>
+  <br><br>
+    <button mat-raised-button type="submit"  >Analyse</button>
+  </form>
+
+
+  <div *ngIf="response" [style.color]="lerpRGB(-1, 1, sentiment.score)">
+      <li>Score: {{sentiment.score}}</li>
+      <li>Type: {{sentiment.type}}</li>
+
+  </div>
+</div>
